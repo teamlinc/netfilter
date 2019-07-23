@@ -1,8 +1,0 @@
-# Interface name
-# Server
-ip link set enp0s3 down
-ip link set name sr0 dev enp0s3
-ip link set sr0 up
-
-# Interface IP Adress
-ip addr add 10.3.0.2/24 dev gr0

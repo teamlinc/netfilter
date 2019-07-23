@@ -1,0 +1,13 @@
+# Interface name
+# Gateway
+ip link set enp0s3 down
+ip link set name gc0 dev enp0s3
+ip link set gc0 up
+
+ip link set enp0s8 down
+ip link set name gr0 dev enp0s8
+ip link set gr0 up
+
+# Interface IP Adress
+ip addr add 10.1.0.1/24 dev gc0
+ip addr add 10.2.0.1/24 dev gr0
