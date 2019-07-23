@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#interface name
+ip link set enp0s3 down
+ip link set name cg0 dev enp0s3
+ip link set cg0 up
+
+
+#interface ip
+ip addr add 10.1.0.2/24 dev cg0
+
+#routing
+
+
+#iptables

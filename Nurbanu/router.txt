@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#interface name
+
+ip link set enp0s3 down
+ip link set name rs0 dev enp0s3
+ip link set name rs0 up
+
+ip link set name rg0 dev enp0s8
+ip link set rg0 up
+
+
+#interface ip
+ip addr add 10.3.0.1/24 dev rs0
+ip addr add 10.2.0.2/24 dev rg0
+
+#routing
+
+#iptables
