@@ -1,5 +1,3 @@
-#!/bin/bash
-
 #interface name
 
 ip link set enp03 down
@@ -11,7 +9,8 @@ ip link set sr0 up
 ip link addr add 10.3.0.2 dev sr0
 
 #routing
-
+ip ro add 10.1.0.0/24 via 10.3.0.1
+ip ro add 10.2.0.0/24 via 10.3.0.1
 
 #iptables
 
