@@ -1,8 +1,13 @@
 # Interface name
 #Client e0
-ip link set eth0 down
-ip link set name cg0 dev eth0
+ip link set enp0s3 down
+ip link set name cg0 dev enp0s3
 ip link set cg0 up
 
 # Interface IP Adress
 ip addr add 10.1.0.2/24 dev cg0
+
+#Routing
+
+ip route add 10.2.0.0/24 via 10.1.0.1 dev cg0
+ip route add 10.3.0.0/24 via 10.1.0.1 dev cg0
