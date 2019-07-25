@@ -1,12 +1,20 @@
 #!/bin/bash
 
-#Ağ adaptörünün ismini değiştirmek için önce kapatıp sonra adını değiştirmek gerekiyor.
+#Interface names
 ip link set enp0s3 down
 
 ip link set enp0s3 name cg0
 
 ip link set cg0 up
 
-#Daha sonra ipsini atıyoruz
+#Interface Ips
 
 ip addr add 10.1.0.2/24 dev cg0
+
+#Routing
+
+ip ro add 10.2.0.0/24 via 10.1.0.1
+
+ip ro add 10.3.0.0/24 via 10.1.0.1
+
+#Iptables
