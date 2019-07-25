@@ -11,3 +11,6 @@ ip link set gr0 up
 # Interface IP Adress
 ip addr add 10.1.0.1/24 dev gc0
 ip addr add 10.2.0.1/24 dev gr0
+
+#Routing
+ip route add 10.3.0.0/24 via 10.2.0.2 dev gr0
