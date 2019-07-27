@@ -11,6 +11,7 @@ ip link addr add 10.3.0.2 dev sr0
 #routing
 ip ro add 10.1.0.0/24 via 10.3.0.1
 ip ro add 10.2.0.0/24 via 10.3.0.1
+ip ro add 10.201.102.0/24 via 10.3.0.1
 
 #iptables
 

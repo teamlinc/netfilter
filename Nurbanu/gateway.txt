@@ -12,9 +12,8 @@ ip addr add 10.1.0.1/24 dev gc0
 ip addr add 10.2.0.1/24 dev gr0
 
 #routing
-sysctl -w net.ipv4.ip_forward=1
 ip ro add 10.3.0.0/24 via 10.2.0.2
-
+ip ro add 10.201.102.0/24 via 10.2.0.2
 
 #iptables
  
