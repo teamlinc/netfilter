@@ -29,3 +29,17 @@ ip ro add default via 10.3.0.1
 ip ro add 10.1.0.0/24 via 10.2.0.1
 
 #Iptables
+
+#/etc/hosts
+
+server  10.3.0.2
+engur_server 10.201.102.1
+fuat_server 10.201.102.2
+sinem_server 10.201.102.3
+furkanr_server 10.201.102.4
+nurbanu_server 10.201.102.5
+timucin_server 10.201.102.6
+erdinc_server 10.201.102.7
+metin_server 10.201.102.8
+orkun_server 10.201.102.9
+my_server 10.201.102.10
